@@ -11,6 +11,7 @@ def get_min_without_arguments():
     """
         raise TypeError exception with message
     """
+    raise TypeError('you must have at least 1 argument')
 
 
 def get_min_with_one_argument(x):

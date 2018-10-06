@@ -3,7 +3,8 @@ from unittest import TestCase
 
 class FindMaxTest(TestCase):
     def test_get_max(self):
-        pass
+        result = f.get_min(50, 22)
+        self.assertEqual(result, 50)
 
     def test_get_max_without_arguments(self):
         pass

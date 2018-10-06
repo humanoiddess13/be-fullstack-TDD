@@ -4,7 +4,7 @@ def get_min(a, b):
     """
         return min number among a and b
     """
-    return a if a<b else b;
+    return a if a < b else b
 
 
 def get_min_without_arguments():
@@ -24,7 +24,7 @@ def get_min_with_many_arguments(*args):
     """
         return smallest number among args
     """
-    result=args[0]
+    result = args[0]
     for i in args:
         if i < result:
             result = i
@@ -37,7 +37,7 @@ def get_min_with_one_or_more_arguments(first, *args):
     """
         return smallest number among first + args
     """
-    result=first
+    result = first
     for i in args:
         if i < result:
             result = i
@@ -49,6 +49,12 @@ def get_min_bounded(*args, low, high):
     """
         return smallest number among args bounded by low & high
     """
+    result = float('inf')
+    for i in args:
+        if low < i < high and i < result:
+            result = i
+
+    return result
 
 
 def make_min(*, low, high):

@@ -25,7 +25,12 @@ class FindMaxTest(TestCase):
         self.assertEqual(86, result)
 
     def test_get_max_bounded(self):
-        pass
+        kwargs = {
+            'low': 0,
+            'high': 70
+        }
+        result = f.get_max_bounded(12, -5, 74, **kwargs)
+        self.assertEqual(12, result)
 
     def test_make_max(self):
         pass

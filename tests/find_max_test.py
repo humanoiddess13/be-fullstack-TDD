@@ -1,9 +1,10 @@
 from unittest import TestCase
 
+import find_max as f
 
 class FindMaxTest(TestCase):
     def test_get_max(self):
-        result = f.get_min(50, 22)
+        result = f.get_max(50, 22)
         self.assertEqual(result, 50)
 
     def test_get_max_without_arguments(self):

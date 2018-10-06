@@ -8,7 +8,7 @@ class FindMaxTest(TestCase):
         self.assertEqual(result, 50)
 
     def test_get_max_without_arguments(self):
-        pass
+        self.assertRaises(TypeError, f.get_max_without_arguments)
 
     def test_get_max_with_one_argument(self):
         pass

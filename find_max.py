@@ -23,14 +23,19 @@ def get_max_with_one_or_more_arguments(first, *args):
     result = -float('inf')
     for i in (first,) + args:
         if i > result:
-            result=i
+            result = i
 
     return result
 
 
 
 def get_max_bounded(*args, low, high):
-    pass
+    result = -float('inf')
+    for i in args:
+        if low < i < high and i > result:
+            result = i
+
+    return result
 
 
 def make_max(*, low, high):
